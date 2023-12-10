@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>D'espace</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">D'espace - Decentralized Space</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <!-- <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li> -->
+            </ul>
+        </header>
+        <section id="sec-1">
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="345.png" id="mountains_behind">
+            <h2 id="text">Web3 Space</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="234-1.png" id="mountains_front">
+
+        </section>
+        <!-- <div class="sec" id="sec">
+            <h2>Start here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur voluptatibus sunt dicta vitae officia soluta omnis, perferendis atque placeat inventore, possimus ipsa numquam dolorum corrupti maxime aperiam rerum? Placeat, pariatur architecto. Quisquam quia temporibus incidunt.</p>
+            <p>
+                <br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim vel ratione inventore eligendi nemo vitae modi beatae nostrum iure a fugiat quo tempore provident aspernatur facere, tenetur iusto assumenda consequuntur?
+            </p>
+        </div> -->
+        <section id="sec-2">
+            <img src="stars.png" id="stars_1">
+            <img src="planet1.png" id="p1" height="10px" width="10px" onclick="move1()">
+            <img src="spship.png" id="sp1">
+            <img src="planet2.png" id="p2" height="10px" width="10px">
+        </section>
+        <section id="sec-3">
+            <img src="stars.png" id="stars_2">
+            <img src="planet3.png" id="p3" height="10px" width="10px">
+            <img src="planet4.png" id="p4" height="10px" width="10px">
+        </section>
+        
+        <script>
+            let moon= document.getElementById('moon');
+            let stars= document.getElementById('stars');
+            let stars_1 = document.getElementById('stars_1');
+            let mountains_behind= document.getElementById('mountains_behind');
+            let mountains_front= document.getElementById('mountains_front');
+            let text= document.getElementById('text');
+            let btn= document.getElementById('btn');
+            let header = document.querySelector('header');
+            let spaceship = document.getElementById('sp1');
+            let planet1 = document.getElementById('p1')
+            let section1= document.getElementById('sec-2')
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.5 + 'px';
+                
+                moon.style.marginLeft = value * -0.25 + 'px';
+                moon.style.top = value * 2 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 2 + 'px';
+                header.style.top = value * 0.5 + 'px';
+
+            })
+           
+
+            window.addEventListener('scroll', function(){
+                let v1 = window.scrollY;
+                stars_1.style.left = v1 * 0.5 + 'px';
+                // spaceship.style.left = v1 * 0.05 + 'vh';
+                // spaceship.style.top = v1 * 2 + 'vh';
+            })
+        </script>
+    </body>
+</html>
